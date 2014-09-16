@@ -1,0 +1,21 @@
+10:49:30,443 INFO  [org.hornetq.integration.bootstrap] HQ101000: Starting HornetQ Server
+10:49:31,158 INFO  [org.hornetq.core.server] HQ221000: live server is starting with configuration HornetQ Configuration (clustered=false,backup=false,sharedStore=true,journalDirectory=../data/journal,bindingsDirectory=../data/bindings,largeMessagesDirectory=../data/large-messages,pagingDirectory=../data/paging)
+10:49:31,160 INFO  [org.hornetq.core.server] HQ221006: Waiting to obtain live lock
+10:49:31,190 INFO  [org.hornetq.core.server] HQ221012: Using AIO Journal
+10:49:31,221 WARN  [org.hornetq.core.server] HQ222007: Security risk! HornetQ is running with the default cluster admin user and default password. Please see the HornetQ user guide, cluster chapter, for instructions on how to change this.
+10:49:31,231 INFO  [org.hornetq.core.server] HQ221043: Adding protocol support CORE
+10:49:31,233 INFO  [org.hornetq.core.server] HQ221043: Adding protocol support STOMP
+10:49:31,235 INFO  [org.hornetq.core.server] HQ221043: Adding protocol support AMQP
+10:49:31,342 INFO  [org.hornetq.core.server] HQ221034: Waiting to obtain live lock
+10:49:31,342 INFO  [org.hornetq.core.server] HQ221035: Live Server Obtained live lock
+10:49:32,440 INFO  [org.hornetq.core.server] HQ221003: trying to deploy queue jms.queue.DLQ
+10:49:32,458 INFO  [org.hornetq.core.server] HQ221003: trying to deploy queue jms.queue.ExpiryQueue
+10:49:32,526 INFO  [org.hornetq.core.server] HQ221003: trying to deploy queue jms.queue.CS3213SimpleQueue
+10:49:32,545 INFO  [org.hornetq.core.server] HQ221003: trying to deploy queue jms.topic.CS3213SimpleTopic
+10:49:32,623 INFO  [org.hornetq.core.server] HQ221020: Started Netty Acceptor version 4.0.13.Final localhost:5445
+10:49:32,626 INFO  [org.hornetq.core.server] HQ221020: Started Netty Acceptor version 4.0.13.Final localhost:5455
+10:49:32,628 INFO  [org.hornetq.core.server] HQ221007: Server is now live
+10:49:32,628 INFO  [org.hornetq.core.server] HQ221001: HornetQ Server version 2.5.0.SNAPSHOT (Wild Hornet, 124) [28c8ff33-3d4b-11e4-9860-33affb1a067e] 
+11:15:56,919 INFO  [org.hornetq.integration.bootstrap] HQ101001: Stopping HornetQ Server
+11:15:56,934 WARN  [org.hornetq.core.server] HQ222113: On ManagementService stop, there are 2 unexpected registered MBeans: [core.acceptor.netty-throughput, core.acceptor.netty]
+11:15:56,997 INFO  [org.hornetq.core.server] HQ221002: HornetQ Server version 2.5.0.SNAPSHOT (Wild Hornet, 124) [28c8ff33-3d4b-11e4-9860-33affb1a067e] stopped

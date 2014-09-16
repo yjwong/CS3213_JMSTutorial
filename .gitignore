@@ -1,0 +1,7 @@
+# IntelliJ IDEA Project Files
+/.idea
+/out
+
+# HornetQ data files and log files.
+/data
+/logs

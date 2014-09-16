@@ -1,0 +1,22 @@
+11:27:58,539 INFO  [org.hornetq.integration.bootstrap] HQ101000: Starting HornetQ Server
+11:27:59,173 WARN  [org.hornetq.core.server] HQ222018: AIO was not located on this platform, it will fall back to using pure Java NIO. If your platform is Linux, install LibAIO to enable the AIO journal
+11:27:59,253 INFO  [org.hornetq.core.server] HQ221000: live server is starting with configuration HornetQ Configuration (clustered=false,backup=false,sharedStore=true,journalDirectory=../data/journal,bindingsDirectory=../data/bindings,largeMessagesDirectory=../data/large-messages,pagingDirectory=../data/paging)
+11:27:59,255 INFO  [org.hornetq.core.server] HQ221006: Waiting to obtain live lock
+11:27:59,283 INFO  [org.hornetq.core.server] HQ221013: Using NIO Journal
+11:27:59,313 WARN  [org.hornetq.core.server] HQ222007: Security risk! HornetQ is running with the default cluster admin user and default password. Please see the HornetQ user guide, cluster chapter, for instructions on how to change this.
+11:27:59,323 INFO  [org.hornetq.core.server] HQ221043: Adding protocol support CORE
+11:27:59,325 INFO  [org.hornetq.core.server] HQ221043: Adding protocol support STOMP
+11:27:59,327 INFO  [org.hornetq.core.server] HQ221043: Adding protocol support AMQP
+11:27:59,434 INFO  [org.hornetq.core.server] HQ221034: Waiting to obtain live lock
+11:27:59,434 INFO  [org.hornetq.core.server] HQ221035: Live Server Obtained live lock
+11:28:00,101 INFO  [org.hornetq.core.server] HQ221003: trying to deploy queue jms.queue.DLQ
+11:28:00,159 INFO  [org.hornetq.core.server] HQ221003: trying to deploy queue jms.queue.ExpiryQueue
+11:28:00,212 INFO  [org.hornetq.core.server] HQ221003: trying to deploy queue jms.queue.CS3213SimpleQueue
+11:28:00,229 INFO  [org.hornetq.core.server] HQ221003: trying to deploy queue jms.topic.CS3213SimpleTopic
+11:28:00,303 INFO  [org.hornetq.core.server] HQ221020: Started Netty Acceptor version 4.0.13.Final localhost:5445
+11:28:00,306 INFO  [org.hornetq.core.server] HQ221020: Started Netty Acceptor version 4.0.13.Final localhost:5455
+11:28:00,307 INFO  [org.hornetq.core.server] HQ221007: Server is now live
+11:28:00,307 INFO  [org.hornetq.core.server] HQ221001: HornetQ Server version 2.5.0.SNAPSHOT (Wild Hornet, 124) [74ff2141-3d51-11e4-9175-b381a55279fe] 
+11:28:31,017 INFO  [org.hornetq.integration.bootstrap] HQ101001: Stopping HornetQ Server
+11:28:31,032 WARN  [org.hornetq.core.server] HQ222113: On ManagementService stop, there are 2 unexpected registered MBeans: [core.acceptor.netty-throughput, core.acceptor.netty]
+11:28:31,068 INFO  [org.hornetq.core.server] HQ221002: HornetQ Server version 2.5.0.SNAPSHOT (Wild Hornet, 124) [74ff2141-3d51-11e4-9175-b381a55279fe] stopped
