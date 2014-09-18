@@ -33,8 +33,6 @@ public class JmsPipe implements IPipe {
         qcon = qconFactory.createQueueConnection();
         qsession = qcon.createQueueSession(false, Session.AUTO_ACKNOWLEDGE);
         queue = (Queue) context.lookup(simpleQueue);
-        qsender = qsession.createSender(queue);
-        qreceiver = qsession.createReceiver(queue);
         msg = qsession.createTextMessage();
         qcon.start();
     }
@@ -42,6 +40,10 @@ public class JmsPipe implements IPipe {
     @Override
     public void write(Order order) {
         try {
+            if (qsender == null) {
+                qsender = qsession.createSender(queue);
+            }
+
             msg.setText(order.toString());
             qsender.send(msg);
         } catch (JMSException e) {
@@ -52,8 +54,13 @@ public class JmsPipe implements IPipe {
     @Override
     public Order read() {
         try {
+            if (qreceiver == null) {
+                qreceiver = qsession.createReceiver(queue);
+            }
+
             TextMessage msg = (TextMessage) qreceiver.receive();
             return Order.fromString(msg.getText());
+
         } catch (JMSException e) {
             System.err.println("[JmsPipe] Failed to receive order.");
         }
@@ -64,8 +71,14 @@ public class JmsPipe implements IPipe {
     @Override
     public void close() {
         try {
-            qreceiver.close();
-            qsender.close();
+            if (qreceiver != null) {
+                qreceiver.close();
+            }
+
+            if (qsender != null) {
+                qsender.close();
+            }
+
             qcon.close();
         } catch (JMSException e) {
             System.err.println("[JmsPipe] Failed to close pipe.");
